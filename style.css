@@ -1,0 +1,133 @@
+@font-face {
+    font-family: LoveFont;
+    src: url(Cassandra.ttf);
+}
+
+@media all and (min-width:960px) and (orientation: landscape){
+    body{
+        position: relative;
+        background-image: url("images/background.png");
+        background-position: center;
+        background-position-y: 30%;
+        background-size: 130%;
+    }
+
+    /* login container*/
+    #login-container{
+        opacity: 0%;
+        transition: 2s;
+        width: 600px;
+        height: 400px;
+        position: absolute;
+        left: 33%;
+        top: 30%;
+        background: linear-gradient(#ffaaaa, #ff5555);
+        border-radius: 30px;
+        box-shadow: 0 0 30px white;);
+    }
+    #login-container h1{
+        text-align: center;
+    }
+
+    .button-container{
+        position: absolute;
+        display: inline-block;
+        left: 23%;
+    }
+
+    .love-buttons{
+        transition: 0.3s;
+        -webkit-text-stroke: 2px black;
+        cursor: pointer;
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+    }
+}
+/*for mobile devices*/
+@media all and (min-width:260px) and (orientation: portrait){
+    body{
+        position: relative;
+        background-image: url("images/background-mobile.png");
+        background-size:100% ;
+    }
+
+    #login-container{
+        opacity: 0%;
+        transition: 2s;
+        width: 780px;
+        height: 560px;
+        position: absolute;
+        left: 10%;
+        top: 50%;
+
+        background: linear-gradient(#ffaaaa, #ff5555);
+        border-radius: 50px;
+        box-shadow: 0 0 50px white;);
+    }
+    #login-container h1{
+        text-align: center;
+        font-size: 180%;
+    }
+
+    .button-container{
+        position: absolute;
+        display: inline-block;
+
+        left: 13%;
+    }
+
+    .love-buttons{
+        transition: 0.3s;
+        cursor: pointer;
+        height: 250px;
+        width: 250px;
+        border-radius: 50%;
+    }
+    .love-buttons {
+        background-size: 100%;
+    }
+
+
+
+}
+
+
+
+
+* {
+    font-family: "Calibri Light", serif;
+    font-size: 140%;
+}
+
+.love-span{
+    font-size: 60%;
+    font-family: LoveFont, serif;
+    color: red;
+}
+
+
+#mar{
+    background-image: url("images/mar-button-image.png");
+}
+#mar:hover{
+    background-image: url("images/mar-button-image-hovered.png");
+}
+
+
+#leah{
+    background-image: url("images/leah-button-image.png");
+}
+#leah:hover{
+    background-image: url("images/leah-button-image-hovered.png");
+}
+
+
+/*          login container*/
+
+#mar-love-alert{
+    visibility: hidden;
+}
+#leah-love-alert{
+    visibility: hidden;
+}
