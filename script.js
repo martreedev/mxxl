@@ -1,4 +1,3 @@
-const marID = "mar";
 let loggedInID = null;
 let login_prompt = document.getElementById("login-container");
 
@@ -17,33 +16,26 @@ function fade(element) {
 
 function define_button(button){
     const button_id = button.id;
-    if (button_id === marID){   // if mar button was pressed
-        loggedInID = button_id;
-        display_personalized_questions(button_id);
-    }
-    else {  // if leah button was pressed
-        display_personalized_questions(button_id);
-    }
+    loggedInID = button_id;
+    display_personalized_questions(button_id);
 }
 
 function display_personalized_questions(id){
     // reveal the hidden question div based on which button was pressed
-    let love_alter_menuID = id + "-love-alert";
-    let love_alter_menu = document.getElementById(love_alter_menuID);
+    let love_alter_menu = document.getElementById((id + "-love-alert"));
     love_alter_menu.style.visibility = "visible";
     //remove login prompt
     login_prompt.remove();
 }
 
-
 function isCorrectChoice(button, person){
     const correct_buttonID = "";
     let buttonID = button.id;
-    if (person === "mar"){
+    if (person === "mar" ){
         if(buttonID === "mar-button3"){
             button.style.backgroundColor = "#7cfc00";
             // log mariusz in
-            logIn("mar");
+            logIn("mar", 200);
         }else{
             button.style.backgroundColor = "#FF2B2B";
         }
@@ -51,14 +43,17 @@ function isCorrectChoice(button, person){
         if(buttonID === "leah-button1"){
             button.style.backgroundColor = "#7cfc00";
             // log leah in
-            logIn("leah");
+            logIn("leah", 200);
         }else{
             button.style.backgroundColor = "#FF2B2B";
         }
     }
 }
 
-function logIn(user){
-    console.log(user + " has logged in");
-    location.reload();
+function logIn(user, sleep_duration){
+    setTimeout(()=>{
+        console.log(user + " has logged in");
+        //change page
+        location.reload();
+    },sleep_duration)
 }
