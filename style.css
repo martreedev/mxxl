@@ -2,13 +2,14 @@
     font-family: LoveFont;
     src: url(Cassandra.ttf);
 }
-
+/* style for landscape devices*/
 @media all and (min-width:960px) and (orientation: landscape){
     body{
         position: relative;
+
         background-image: url("images/background.png");
         background-position: center;
-        background-position-y: 30%;
+        background-position-y: 15%;
         background-size: 130%;
     }
 
@@ -20,7 +21,8 @@
         height: 400px;
         position: absolute;
         left: 33%;
-        top: 30%;
+        margin-top: 200px;
+
         background: linear-gradient(#ffaaaa, #ff5555);
         border-radius: 30px;
         box-shadow: 0 0 30px white;);
@@ -31,18 +33,77 @@
 
     .button-container{
         position: absolute;
-        display: inline-block;
+
         left: 23%;
     }
 
     .love-buttons{
         transition: 0.3s;
-        -webkit-text-stroke: 2px black;
         cursor: pointer;
         height: 150px;
         width: 150px;
         border-radius: 50%;
     }
+    .container{
+
+
+    }
+    .love-alert-box{
+        background: linear-gradient(#ffaaaa, #ff5555);
+        box-shadow: 0 0 70px white;);
+        width: 650px;
+        height: 450px;
+        position: fixed;
+        left: 30%;
+        border-radius: 30px;
+        padding: 20px;
+
+    }
+    #mar-love-alert{
+        z-index: 10;
+    }
+
+
+    .security-question{
+        font-size: 25px;
+        margin: 0px;
+    }
+    .main-question{
+        font-size: 50px;
+        padding-bottom: 80px;
+        margin: 0px;
+    }
+    .love-button-container{
+        position: relative;
+        display: flex;
+        gap: 50px;
+        left: 7%;
+
+    }
+    .love-button-container button{
+        line-height: 1.5;
+        text-align: center;
+        transition: 0.3s;
+        font-size: 29px;
+        width: 150px;
+        height: 150px;
+
+        background-color: white;
+        border-radius: 15%;
+    }
+    .love-button-container button:hover{
+        transition: 0.5s;
+        background-color: pink;
+        cursor: pointer;
+    }
+    .love-alert-box p{
+        text-align: center;
+    }
+
+
+
+
+
 }
 /*for mobile devices*/
 @media all and (min-width:260px) and (orientation: portrait){
@@ -72,7 +133,7 @@
 
     .button-container{
         position: absolute;
-        display: inline-block;
+
 
         left: 13%;
     }
@@ -83,10 +144,9 @@
         height: 250px;
         width: 250px;
         border-radius: 50%;
-    }
-    .love-buttons {
         background-size: 100%;
     }
+
 
 
 
