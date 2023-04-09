@@ -35,25 +35,30 @@ function display_personalized_questions(id){
     login_prompt.remove();
 }
 
+
 function isCorrectChoice(button, person){
     const correct_buttonID = "";
     let buttonID = button.id;
     if (person === "mar"){
         if(buttonID === "mar-button3"){
-            console.log("correct");
             button.style.backgroundColor = "#7cfc00";
             // log mariusz in
+            logIn("mar");
         }else{
             button.style.backgroundColor = "#FF2B2B";
         }
     }else{
         if(buttonID === "leah-button1"){
-            console.log("correct");
             button.style.backgroundColor = "#7cfc00";
             // log leah in
+            logIn("leah");
         }else{
             button.style.backgroundColor = "#FF2B2B";
         }
-
     }
+}
+
+function logIn(user){
+    console.log(user + " has logged in");
+    location.reload();
 }
