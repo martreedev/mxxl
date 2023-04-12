@@ -1,18 +1,6 @@
 let loggedInID = null;
 let login_prompt = document.getElementById("login-container");
 
-function fade(element) {
-    let op = 0.1;  // initial opacity
-    element.style.display = 'block';
-    let timer = setInterval(function () {
-        if (op >= 1){
-            clearInterval(timer);
-        }
-        element.style.opacity = op;
-        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
-        op += op * 0.1;
-    }, 10);
-}fade(login_prompt);
 
 function define_button(button){
     const button_id = button.id;
@@ -28,9 +16,16 @@ function display_personalized_questions(id){
     login_prompt.remove();
 }
 
+let nigger = localStorage.getItem("button");
+console.log(nigger)
+
 function isCorrectChoice(button, person){
-    const correct_buttonID = "";
     let buttonID = button.id;
+
+    let classNam = JSON.stringify(button.id);
+    localStorage.setItem("button",classNam);
+    console.log(localStorage.getItem("button"))
+
     if (person === "mar" ){
         if(buttonID === "mar-button3"){
             button.style.backgroundColor = "#7cfc00";
@@ -54,6 +49,7 @@ function logIn(user, sleep_duration){
     setTimeout(()=>{
         console.log(user + " has logged in");
         //change page
-        location.reload();
+        //location.reload();
     },sleep_duration)
 }
+
