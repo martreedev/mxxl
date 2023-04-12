@@ -16,9 +16,6 @@ function display_personalized_questions(id){
     login_prompt.remove();
 }
 
-let nigger = localStorage.getItem("button");
-console.log(nigger)
-
 function isCorrectChoice(button, person){
     let buttonID = button.id;
 
